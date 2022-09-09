@@ -1,39 +1,99 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+## slide_up
+### create a slider
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
 
-## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## Installation
 
-## Getting started
+Add slide_up to your pubspec.yaml dependencies. And import it:
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+```bash
+  slide_up: ^1.0.0
+```
+    
+## How to use #
 
-## Usage
+Simply create a SlideUp widget, and pass the required params:
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
-```dart
-const like = 'sample';
+```bash
+  SlideUp( 
+          color: Color.fromRGBO(244, 67, 54, 1),
+          body: Container(
+            color: Colors.yellow,
+          ), 
+          bottomSheet: Container(
+            color: Colors.green,
+            child: Text("g")
+          )
+    ),
 ```
 
-## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+## Params
+
+```dart
+  final Widget body;
+  final Widget bottomSheet;
+  final double maxHeight;
+  final double minHeight;
+  final double? initialHeight;
+  final SlideUpController? slideUpController;
+  final Duration animationDuration;
+  final double? thresholdHeight;
+  final Color? color;
+  final Decoration? decoration;
+  final AlignmentGeometry? alignment;
+  final EdgeInsetsGeometry? padding;
+  final Decoration? foregroundDecoration;
+  final BoxConstraints? constraints;
+  final EdgeInsetsGeometry? margin;
+  final Matrix4? transform;
+  final AlignmentGeometry? transformAlignment;
+  final Clip clipBehavior;
+  final Curve curve;
+  final void Function()? onEnd;
+  final bool clickOutSlideToClose;  // default value is false 
+  final VoidCallback? reachedMaxPosition;
+  final VoidCallback? reachedMinPosition;
+```
+
+
+## Screenshots
+
+![App Screenshot](https://github.com/praveen576232/slide_up/blob/main/screenshots/preview.gif?raw=true)
+
+
+## SlideController methods
+``` bash 
+.goToMinPosition()
+
+```
+go to the min position
+
+``` bash 
+.goToMaxPosition()
+
+```
+go to the max position
+
+## SlideController value
+``` bash 
+ currentValue (get a currentValue of slider)
+
+ minHeight (get a minHeight of slider)
+
+ maxHeight (get a maxHeight of slider)
+
+ inMinPosition (true if slider reach min position)
+ 
+ inMaxPosition (true if slider reach max position)
+```
+
+## Badges
+
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
+
