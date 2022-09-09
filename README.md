@@ -10,7 +10,7 @@
 Add slide_up to your pubspec.yaml dependencies. And import it:
 
 ```bash
-  slide_up: ^1.0.0
+  slide_up: ^0.0.1
 ```
     
 ## How to use #
